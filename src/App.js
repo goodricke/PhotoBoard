@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import { useEffect, useState } from "react";
 import './App.css';
+import { Person } from "./Person";
+import data from "./data";
 
 function App() {
+
+  const [page, setPage] = useState(0);
+
+  useEffect(() => {
+    const listener = e => {
+      if (e.keyCode === 37) {
+        setPage(Math.max(0, page - 1));
+      } else if (e.keyCode === 39) {
+        setPage(Math.min(data.length - 1, page + 1));
+      }
+    };
+
+    window.addEventListener("keydown", listener);
+
+    return () => window.removeEventListener("keydown", listener);
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Person data={data[page]}/> */}
+      {data.map(d => (
+        <Person data={d} key={d.name}/>
+      ))}
     </div>
   );
 }

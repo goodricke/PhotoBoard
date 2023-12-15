@@ -1,13 +1,83 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: "Candara", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  font-size: 8mm;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
+  margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.person {
+  padding: 10mm 15mm;
+  box-sizing: border-box;
+  background-color: #008037;
+  width: 210mm;
+  height: 297mm;
+  position: relative;
+  /* border: 8mm solid white; */
+}
+
+img {
+  /* width: 100%; */
+  height: 145mm;
+  margin: 6mm 0;
+  border: 10px solid #0b5220;
+  border-radius: 30px;
+  background-color: #0b5220;
+}
+
+.email {
+  font-style: italic;
+  margin-top: 0.3em;
+  margin-bottom: 1.2em;
+}
+
+p {
+  opacity: 0.9;
+  line-height: 1.15;
+  margin: 0.7em 0;
+}
+
+h1,
+h2 {
+  font-family: "Titan One";
+  font-size: 21mm;
+  letter-spacing: -2px;
+  margin: 0;
+  color: #ffdd22;
+  -webkit-text-stroke: 0.8px black;
+  line-height: 1;
+}
+
+.group-tag {
+  position: absolute;
+  bottom: 0;
+  right: 10mm;
+  font-size: 0.8em;
+  padding: 0.5em 1em;
+  border-radius: 12px 12px 0 0;
+  text-transform: capitalize;
+}
+
+.group-tag-sport {
+  background-color: rgb(189, 152, 235);
+  color: black;
+}
+
+.group-tag-wellbeing {
+  background-color: rgb(206, 206, 106);
+  color: black;
+}
+
+.group-tag-events {
+  background-color: rgb(125, 168, 218);
+  color: black;
+}
+
+.group-tag-finance {
+  background-color: rgb(134, 199, 128);
+  color: black;
 }
